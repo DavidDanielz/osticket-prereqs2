@@ -99,6 +99,393 @@ the installation.
 
 ---
 
+### Step 4: Prepare the Environment
+
+<p align="center">
+  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Environment Preparation"/>
+</p>
+
+<p>
+Confirm that the virtual machine is running, Remote Desktop access is functional, and IIS is installed.
+This establishes the foundation required for hosting the osTicket web application.
+</p>
+
+<br/>
+
+---
+
+### Step 5: Install Required Components
+
+<p align="center">
+  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Installing Dependencies"/>
+</p>
+
+<p>
+Install and configure the necessary services and dependencies required for osTicket to function properly
+within the IIS environment.
+</p>
+
+<br/>
+
+---
+
+### Step 6: Deploy osTicket
+
+<p align="center">
+  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="osTicket Installation"/>
+</p>
+
+<p>
+Deploy the osTicket files, configure permissions, and complete the browser-based setup to finalize
+the installation.
+</p>
+
+---
+
+### Step 7: Prepare the Environment
+
+<p align="center">
+  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Environment Preparation"/>
+</p>
+
+<p>
+Confirm that the virtual machine is running, Remote Desktop access is functional, and IIS is installed.
+This establishes the foundation required for hosting the osTicket web application.
+</p>
+
+<br/>
+
+---
+
+### Step 8: Install Required Components
+
+<p align="center">
+  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Installing Dependencies"/>
+</p>
+
+<p>
+Install and configure the necessary services and dependencies required for osTicket to function properly
+within the IIS environment.
+</p>
+
+<br/>
+
+---
+
+### Step 9: Deploy osTicket
+
+<p align="center">
+  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="osTicket Installation"/>
+</p>
+
+<p>
+Deploy the osTicket files, configure permissions, and complete the browser-based setup to finalize
+the installation.
+</p>
+
+---
+
+### Step 10: Prepare the Environment
+
+<p align="center">
+  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Environment Preparation"/>
+</p>
+
+<p>
+Confirm that the virtual machine is running, Remote Desktop access is functional, and IIS is installed.
+This establishes the foundation required for hosting the osTicket web application.
+</p>
+
+<br/>
+
+---
+
+### Step 11: Install Required Components
+
+<p align="center">
+  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Installing Dependencies"/>
+</p>
+
+<p>
+Install and configure the necessary services and dependencies required for osTicket to function properly
+within the IIS environment.
+</p>
+
+<br/>
+
+---
+
+### Step 12: Deploy osTicket
+
+<p align="center">
+  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="osTicket Installation"/>
+</p>
+
+<p>
+Deploy the osTicket files, configure permissions, and complete the browser-based setup to finalize
+the installation.
+</p>
+
+---
+
+### Step 13: Prepare the Environment
+
+<p align="center">
+  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Environment Preparation"/>
+</p>
+
+<p>
+Confirm that the virtual machine is running, Remote Desktop access is functional, and IIS is installed.
+This establishes the foundation required for hosting the osTicket web application.
+</p>
+
+<br/>
+
+---
+
+### Step 14: Install Required Components
+
+<p align="center">
+  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Installing Dependencies"/>
+</p>
+
+<p>
+Install and configure the necessary services and dependencies required for osTicket to function properly
+within the IIS environment.
+</p>
+
+<br/>
+
+---
+
+### Step 15: Deploy osTicket
+
+<p align="center">
+  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="osTicket Installation"/>
+</p>
+
+<p>
+Deploy the osTicket files, configure permissions, and complete the browser-based setup to finalize
+the installation.
+</p>
+
+---
+
+### Step 16: Prepare the Environment
+
+<p align="center">
+  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Environment Preparation"/>
+</p>
+
+<p>
+Confirm that the virtual machine is running, Remote Desktop access is functional, and IIS is installed.
+This establishes the foundation required for hosting the osTicket web application.
+</p>
+
+<br/>
+
+---
+
+### Step 17: Install Required Components
+
+<p align="center">
+  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Installing Dependencies"/>
+</p>
+
+<p>
+Install and configure the necessary services and dependencies required for osTicket to function properly
+within the IIS environment.
+</p>
+
+<br/>
+
+---
+
+### Step 18: Deploy osTicket
+
+<p align="center">
+  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="osTicket Installation"/>
+</p>
+
+<p>
+Deploy the osTicket files, configure permissions, and complete the browser-based setup to finalize
+the installation.
+</p>
+
+---
+
+### Step 19: Prepare the Environment
+
+<p align="center">
+  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Environment Preparation"/>
+</p>
+
+<p>
+Confirm that the virtual machine is running, Remote Desktop access is functional, and IIS is installed.
+This establishes the foundation required for hosting the osTicket web application.
+</p>
+
+<br/>
+
+---
+
+### Step 20: Install Required Components
+
+<p align="center">
+  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Installing Dependencies"/>
+</p>
+
+<p>
+Install and configure the necessary services and dependencies required for osTicket to function properly
+within the IIS environment.
+</p>
+
+<br/>
+
+---
+
+### Step 21: Deploy osTicket
+
+<p align="center">
+  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="osTicket Installation"/>
+</p>
+
+<p>
+Deploy the osTicket files, configure permissions, and complete the browser-based setup to finalize
+the installation.
+</p>
+
+---
+
+### Step 22: Prepare the Environment
+
+<p align="center">
+  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Environment Preparation"/>
+</p>
+
+<p>
+Confirm that the virtual machine is running, Remote Desktop access is functional, and IIS is installed.
+This establishes the foundation required for hosting the osTicket web application.
+</p>
+
+<br/>
+
+---
+
+### Step 23: Install Required Components
+
+<p align="center">
+  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Installing Dependencies"/>
+</p>
+
+<p>
+Install and configure the necessary services and dependencies required for osTicket to function properly
+within the IIS environment.
+</p>
+
+<br/>
+
+---
+
+### Step 24: Deploy osTicket
+
+<p align="center">
+  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="osTicket Installation"/>
+</p>
+
+<p>
+Deploy the osTicket files, configure permissions, and complete the browser-based setup to finalize
+the installation.
+</p>
+
+---
+
+### Step 25: Prepare the Environment
+
+<p align="center">
+  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Environment Preparation"/>
+</p>
+
+<p>
+Confirm that the virtual machine is running, Remote Desktop access is functional, and IIS is installed.
+This establishes the foundation required for hosting the osTicket web application.
+</p>
+
+<br/>
+
+---
+
+### Step 26: Install Required Components
+
+<p align="center">
+  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Installing Dependencies"/>
+</p>
+
+<p>
+Install and configure the necessary services and dependencies required for osTicket to function properly
+within the IIS environment.
+</p>
+
+<br/>
+
+---
+
+### Step 27: Deploy osTicket
+
+<p align="center">
+  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="osTicket Installation"/>
+</p>
+
+<p>
+Deploy the osTicket files, configure permissions, and complete the browser-based setup to finalize
+the installation.
+</p>
+
+---
+
+### Step 28: Prepare the Environment
+
+<p align="center">
+  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Environment Preparation"/>
+</p>
+
+<p>
+Confirm that the virtual machine is running, Remote Desktop access is functional, and IIS is installed.
+This establishes the foundation required for hosting the osTicket web application.
+</p>
+
+<br/>
+
+---
+
+### Step 29: Install Required Components
+
+<p align="center">
+  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Installing Dependencies"/>
+</p>
+
+<p>
+Install and configure the necessary services and dependencies required for osTicket to function properly
+within the IIS environment.
+</p>
+
+<br/>
+
+---
+
+### Step 30: Deploy osTicket
+
+<p align="center">
+  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="osTicket Installation"/>
+</p>
+
+<p>
+Deploy the osTicket files, configure permissions, and complete the browser-based setup to finalize
+the installation.
+</p>
+
+---
+
 <hr/>
 
 ## ✅ Outcome
