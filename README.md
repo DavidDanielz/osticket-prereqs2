@@ -56,7 +56,7 @@ Before beginning the installation, ensure the following are in place:
 
 ## ⚙️ Installation Steps
 
-### Step 1: Prepare the Environment
+### Step 1: Create an Azure Virtual Machine Windows 10, 4 vCPUs
 
 <p align="center">
   <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Environment Preparation"/>
@@ -71,7 +71,7 @@ This establishes the foundation required for hosting the osTicket web applicatio
 
 ---
 
-### Step 2: Install Required Components
+### Step 2: Log into the VM with Remote Desktop
 
 <p align="center">
   <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Installing Dependencies"/>
@@ -86,7 +86,7 @@ within the IIS environment.
 
 ---
 
-### Step 3: Deploy osTicket
+### Step 3: Within the VM (osticket-vm), download the osTicket-Installation-Files.zip and unzip it onto your desktop.
 
 <p align="center">
   <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="osTicket Installation"/>
@@ -99,7 +99,7 @@ the installation.
 
 ---
 
-### Step 4: Prepare the Environment
+### Step 4: Install / Enable IIS in Windows WITH CGI
 
 <p align="center">
   <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Environment Preparation"/>
@@ -114,7 +114,7 @@ This establishes the foundation required for hosting the osTicket web applicatio
 
 ---
 
-### Step 5: Install Required Components
+### Step 5: From the “osTicket-Installation-Files” folder, install PHP Manager for IIS 
 
 <p align="center">
   <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Installing Dependencies"/>
@@ -129,7 +129,7 @@ within the IIS environment.
 
 ---
 
-### Step 6: Deploy osTicket
+### Step 6: From the “osTicket-Installation-Files” folder install the Rewrite Module 
 
 <p align="center">
   <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="osTicket Installation"/>
@@ -142,7 +142,7 @@ the installation.
 
 ---
 
-### Step 7: Prepare the Environment
+### Step 7: Create the directory C:\PHP
 
 <p align="center">
   <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Environment Preparation"/>
@@ -157,7 +157,7 @@ This establishes the foundation required for hosting the osTicket web applicatio
 
 ---
 
-### Step 8: Install Required Components
+### Step 8: From the “osTicket-Installation-Files” folder, unzip PHP 7.3.8 
 
 <p align="center">
   <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Installing Dependencies"/>
@@ -172,7 +172,7 @@ within the IIS environment.
 
 ---
 
-### Step 9: Deploy osTicket
+### Step 9: From the “osTicket-Installation-Files” folder, install VC_redist.x86.exe.
 
 <p align="center">
   <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="osTicket Installation"/>
@@ -185,7 +185,7 @@ the installation.
 
 ---
 
-### Step 10: Prepare the Environment
+### Step 10: From the “osTicket-Installation-Files” folder, install MySQL 5.5.62 
 
 <p align="center">
   <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Environment Preparation"/>
@@ -200,7 +200,7 @@ This establishes the foundation required for hosting the osTicket web applicatio
 
 ---
 
-### Step 11: Install Required Components
+### Step 11: Open IIS as an Admin
 
 <p align="center">
   <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Installing Dependencies"/>
@@ -215,7 +215,7 @@ within the IIS environment.
 
 ---
 
-### Step 12: Deploy osTicket
+### Step 12: Register PHP from within IIS (PHP Manager -> C:\PHP\php-cgi.exe)
 
 <p align="center">
   <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="osTicket Installation"/>
@@ -228,7 +228,7 @@ the installation.
 
 ---
 
-### Step 13: Prepare the Environment
+### Step 13: Reload IIS (Open IIS, Stop and Start the server)
 
 <p align="center">
   <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Environment Preparation"/>
@@ -243,7 +243,7 @@ This establishes the foundation required for hosting the osTicket web applicatio
 
 ---
 
-### Step 14: Install Required Components
+### Step 14: Install osTicket v1.15.8
 
 <p align="center">
   <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Installing Dependencies"/>
@@ -258,7 +258,7 @@ within the IIS environment.
 
 ---
 
-### Step 15: Deploy osTicket
+### Step 15: Reload IIS (Open IIS, Stop and Start the server)
 
 <p align="center">
   <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="osTicket Installation"/>
@@ -271,7 +271,7 @@ the installation.
 
 ---
 
-### Step 16: Prepare the Environment
+### Step 16: Go to sites -> Default -> osTicket
 
 <p align="center">
   <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Environment Preparation"/>
@@ -286,7 +286,7 @@ This establishes the foundation required for hosting the osTicket web applicatio
 
 ---
 
-### Step 17: Install Required Components
+### Step 17: Note that some extensions are not enabled
 
 <p align="center">
   <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Installing Dependencies"/>
@@ -301,7 +301,7 @@ within the IIS environment.
 
 ---
 
-### Step 18: Deploy osTicket
+### Step 18: Rename: ost-config.php
 
 <p align="center">
   <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="osTicket Installation"/>
@@ -314,7 +314,7 @@ the installation.
 
 ---
 
-### Step 19: Prepare the Environment
+### Step 19: Assign Permissions: ost-config.php
 
 <p align="center">
   <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Environment Preparation"/>
@@ -329,7 +329,7 @@ This establishes the foundation required for hosting the osTicket web applicatio
 
 ---
 
-### Step 20: Install Required Components
+### Step 20: Continue Setting up osTicket in the browser (click Continue)
 
 <p align="center">
   <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Installing Dependencies"/>
@@ -344,7 +344,7 @@ within the IIS environment.
 
 ---
 
-### Step 21: Deploy osTicket
+### Step 21: From the “osTicket-Installation-Files” folder, install HeidiSQL.
 
 <p align="center">
   <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="osTicket Installation"/>
@@ -357,7 +357,7 @@ the installation.
 
 ---
 
-### Step 22: Prepare the Environment
+### Step 22: Continue Setting up osTicket in the browser
 
 <p align="center">
   <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Environment Preparation"/>
@@ -372,7 +372,7 @@ This establishes the foundation required for hosting the osTicket web applicatio
 
 ---
 
-### Step 23: Install Required Components
+### Step 23: Congratulations, hopefully it is installed with no errors!
 
 <p align="center">
   <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Installing Dependencies"/>
@@ -387,7 +387,7 @@ within the IIS environment.
 
 ---
 
-### Step 24: Deploy osTicket
+### Step 24: End Users osTicket URL:
 
 <p align="center">
   <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="osTicket Installation"/>
