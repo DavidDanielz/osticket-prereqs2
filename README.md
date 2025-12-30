@@ -119,12 +119,8 @@ Install MySQL Server to support osTicket’s backend database.
 
 ### **Step 9: Register PHP in IIS**
 
-<p align="center">
-  <img src="44. Click PHP Manager in IIS.png" width="80%" alt="IIS Manager with PHP Manager Highlighted"/>
-</p>
-<p align="center">
-  <img src="47. Register new PHP version.png" width="80%" alt="Register PHP Version in PHP Manager"/>
-</p>
+<img src="44. Click PHP Manager in IIS.png" width="80%" alt="IIS Manager with PHP Manager Highlighted"/>
+<img src="47. Register new PHP version.png" width="80%" alt="Register PHP Version in PHP Manager"/>
 
 Use PHP Manager to register <code>php-cgi.exe</code> with IIS and restart the web server. The first screenshot shows PHP Manager inside IIS, and the second shows the registration of the PHP executable.
 
@@ -134,23 +130,17 @@ Use PHP Manager to register <code>php-cgi.exe</code> with IIS and restart the we
 
 This step demonstrates moving the osTicket installation files into IIS’s web root and preparing the application for the browser-based installer.
 
-<p align="center">
-  <img src="52. Taking (upload) folder and adding it to the wwwroot folder.png" width="80%" alt="Initial Folder Setup"/>
-</p>
+<img src="52. Taking (upload) folder and adding it to the wwwroot folder.png" width="80%" alt="Initial Folder Setup"/>
 
 **Step 10a – Initial Folder Structure:**  
 Shows the extracted `osTicket-v1.15.8` folder containing `upload` and `scripts`, and the `wwwroot` folder with only the default `iisstart` file.
 
-<p align="center">
-  <img src="53. upload in wwwroot.png" width="80%" alt="Moving Upload Folder"/>
-</p>
+<img src="53. upload in wwwroot.png" width="80%" alt="Moving Upload Folder"/>
 
 **Step 10b – Moving Upload Folder:**  
 Copy or move the `upload` folder from `osTicket-v1.15.8` into the `C:\inetpub\wwwroot` directory.
 
-<p align="center">
-  <img src="54. Change upload name to osTicket.png" width="80%" alt="Renamed Upload Folder"/>
-</p>
+<img src="54. Change upload name to osTicket.png" width="80%" alt="Renamed Upload Folder"/>
 
 **Step 10c – Final Deployment:**  
 Rename the `upload` folder to `osTicket` inside `wwwroot`. This completes the deployment of the application files, making it ready to access via the web installer.
