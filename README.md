@@ -47,7 +47,7 @@ The walkthrough reflects real-world IT support responsibilities, including serve
 
 ### **Step 1: Provision Azure Virtual Machine**
 <p>
-  <img src="step1-vm.png" width="80%" alt="Azure VM Creation"/>
+  <img src="19. osTicket-VM created (Virtual machines).png" width="80%" alt="Azure VM Creation"/>
 </p>
 Create a Windows 11 virtual machine in Azure and verify successful Remote Desktop access.
 
@@ -55,7 +55,7 @@ Create a Windows 11 virtual machine in Azure and verify successful Remote Deskto
 
 ### **Step 2: Connect via Remote Desktop**
 <p>
-  <img src="step2-rdp.png" width="80%" alt="RDP Login"/>
+  <img src="21.5 Proof of Connecting to VM .png" width="80%" alt="RDP Login"/>
 </p>
 Log into the VM using administrator credentials to begin configuration.
 
@@ -63,7 +63,7 @@ Log into the VM using administrator credentials to begin configuration.
 
 ### **Step 3: Download osTicket Installation Files**
 <p>
-  <img src="step3-files.png" width="80%" alt="Download Files"/>
+  <img src="23. osTicket-installation-files (All).png" width="80%" alt="Download Files"/>
 </p>
 Download and extract the osTicket installation package within the Azure VM.
 
@@ -71,8 +71,8 @@ Download and extract the osTicket installation package within the Azure VM.
 
 ### **Step 4: Install IIS with CGI Enabled**
 <div style="display: flex; justify-content: space-around; align-items: center;">
-  <img src="step4-iis1.png" width="45%" alt="IIS Windows Features"/>
-  <img src="step4-iis2.png" width="45%" alt="CGI Enabled"/>
+  <img src="29. Click IIS to World Wide Web Services .png" width="45%" alt="IIS Windows Features"/>
+  <img src="30. Click IIS to WWWS to Application Development Features to check off CGI.png" width="45%" alt="CGI Enabled"/>
 </div>
 
 <p>
@@ -83,8 +83,8 @@ Enable IIS through Windows Features and ensure CGI support is selected.
 
 ### **Step 5: Install IIS Dependencies**
 <div style="display: flex; justify-content: space-around; align-items: center;">
-  <img src="step5-dependencies1.png" width="45%" alt="PHP Manager"/>
-  <img src="step5-dependencies2.png" width="45%" alt="IIS URL Rewrite Module"/>
+  <img src="32. PHP Manager for IIS setup.png" width="45%" alt="PHP Manager"/>
+  <img src="33. IIS URL Rewrite Module 2 Setup.png" width="45%" alt="IIS URL Rewrite Module"/>
 </div>
 
 <p>
@@ -95,7 +95,7 @@ Install PHP Manager for IIS and the IIS URL Rewrite Module.
 
 ### **Step 6: Install PHP Runtime**
 <p>
-  <img src="step6-php.png" width="80%" alt="PHP Install"/>
+  <img src="38. Extract_Select Destination_C to PHP.png" width="80%" alt="PHP Install"/>
 </p>
 Create `C:\PHP`, extract PHP 7.3.8, and install the Visual C++ Redistributable.
 
