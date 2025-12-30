@@ -6,483 +6,162 @@
 
 <p align="center">
   <b>End-to-end deployment of the osTicket help desk system on Microsoft Azure</b><br/>
-  Windows VM • IIS • Remote Desktop
+  Windows Virtual Machine • IIS • PHP • MySQL
 </p>
+
 <div align="center">
   
   ![Azure](https://img.shields.io/badge/Microsoft_Azure-0089D6?style=for-the-badge&logo=microsoft-azure&logoColor=white)
-  ![IIS](https://img.shields.io/badge/IIS-5E5E5E?style=for-the-badge)
-  ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-  ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
   ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
-  ![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=white)
+  ![IIS](https://img.shields.io/badge/IIS-5E5E5E?style=for-the-badge)
+  ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+  ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 
 </div>
 
-<hr/>
+---
 
 ## 📌 Overview
 
-This tutorial walks through the **prerequisites, configuration, and installation** of the open-source help desk ticketing system **osTicket** within a Microsoft Azure virtual machine environment.  
-It is designed as a **portfolio-ready project** demonstrating foundational IT support and system administration skills.
+This project demonstrates the **full technical installation and configuration** of **osTicket**, an open-source help desk ticketing system, deployed on a **Microsoft Azure-hosted Windows virtual machine**.
+
+The walkthrough reflects real-world IT support responsibilities, including server provisioning, dependency installation, web server configuration, database setup, and application deployment.
 
 ---
 
-## 🧰 Environments & Technologies Used
+## 🖥️ Environment & Technologies
 
-- **Microsoft Azure** (Virtual Machines / Compute)
-- **Remote Desktop Protocol (RDP)**
-- **Internet Information Services (IIS)**
-
----
-
-## 💻 Operating System
-
-- **Windows 10 Pro** (21H2)
+- Microsoft Azure (Virtual Machines)
+- Windows 11 Pro
+- Internet Information Services (IIS) with CGI
+- PHP 7.3.8
+- MySQL 5.5
+- Remote Desktop Protocol (RDP)
+- HeidiSQL
 
 ---
 
-## 📋 Prerequisites
-
-Before beginning the installation, ensure the following are in place:
-
-- Azure Virtual Machine (Windows-based)
-- Administrator access to the VM
-- Remote Desktop enabled
-- IIS installed and configured
-- Required osTicket dependencies available
+## ⚙️ Installation & Configuration (15 Steps)
 
 ---
 
-## ⚙️ Installation Steps
-
-### Step 1: Create an Azure Virtual Machine Windows 10, 4 vCPUs
-
-<p align="center">
-  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Environment Preparation"/>
-</p>
-
+### **Step 1: Provision Azure Virtual Machine**
 <p>
-Confirm that the virtual machine is running, Remote Desktop access is functional, and IIS is installed.
-This establishes the foundation required for hosting the osTicket web application.
+  <img src="step1-vm.png" width="80%" alt="Azure VM Creation"/>
 </p>
-
-<br/>
+Create a Windows 11 virtual machine in Azure and verify successful Remote Desktop access.
 
 ---
 
-### Step 2: Log into the VM with Remote Desktop
-
-<p align="center">
-  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Installing Dependencies"/>
-</p>
-
+### **Step 2: Connect via Remote Desktop**
 <p>
-Install and configure the necessary services and dependencies required for osTicket to function properly
-within the IIS environment.
+  <img src="step2-rdp.png" width="80%" alt="RDP Login"/>
 </p>
-
-<br/>
+Log into the VM using administrator credentials to begin configuration.
 
 ---
 
-### Step 3: Within the VM (osticket-vm), download the osTicket-Installation-Files.zip and unzip it onto your desktop.
-
-<p align="center">
-  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="osTicket Installation"/>
-</p>
-
+### **Step 3: Download osTicket Installation Files**
 <p>
-Deploy the osTicket files, configure permissions, and complete the browser-based setup to finalize
-the installation.
+  <img src="step3-files.png" width="80%" alt="Download Files"/>
 </p>
+Download and extract the osTicket installation package within the Azure VM.
 
 ---
 
-### Step 4: Install / Enable IIS in Windows WITH CGI
-
-<p align="center">
-  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Environment Preparation"/>
-</p>
-
+### **Step 4: Install IIS with CGI Enabled**
 <p>
-Confirm that the virtual machine is running, Remote Desktop access is functional, and IIS is installed.
-This establishes the foundation required for hosting the osTicket web application.
+  <img src="step4-iis.png" width="80%" alt="IIS CGI"/>
 </p>
-
-<br/>
+Enable IIS through Windows Features and ensure CGI support is selected.
 
 ---
 
-### Step 5: From the “osTicket-Installation-Files” folder, install PHP Manager for IIS 
-
-<p align="center">
-  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Installing Dependencies"/>
-</p>
-
+### **Step 5: Install IIS Dependencies**
 <p>
-Install and configure the necessary services and dependencies required for osTicket to function properly
-within the IIS environment.
+  <img src="step5-dependencies.png" width="80%" alt="PHP Manager and Rewrite"/>
 </p>
-
-<br/>
+Install PHP Manager for IIS and the IIS URL Rewrite Module.
 
 ---
 
-### Step 6: From the “osTicket-Installation-Files” folder install the Rewrite Module 
-
-<p align="center">
-  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="osTicket Installation"/>
-</p>
-
+### **Step 6: Install PHP Runtime**
 <p>
-Deploy the osTicket files, configure permissions, and complete the browser-based setup to finalize
-the installation.
+  <img src="step6-php.png" width="80%" alt="PHP Install"/>
 </p>
+Create `C:\PHP`, extract PHP 7.3.8, and install the Visual C++ Redistributable.
 
 ---
 
-### Step 7: Create the directory C:\PHP
-
-<p align="center">
-  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Environment Preparation"/>
-</p>
-
+### **Step 7: Install MySQL Server**
 <p>
-Confirm that the virtual machine is running, Remote Desktop access is functional, and IIS is installed.
-This establishes the foundation required for hosting the osTicket web application.
+  <img src="step7-mysql.png" width="80%" alt="MySQL Install"/>
 </p>
-
-<br/>
+Install MySQL Server to support osTicket’s backend database.
 
 ---
 
-### Step 8: From the “osTicket-Installation-Files” folder, unzip PHP 7.3.8 
-
-<p align="center">
-  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Installing Dependencies"/>
-</p>
-
+### **Step 8: Register PHP in IIS**
 <p>
-Install and configure the necessary services and dependencies required for osTicket to function properly
-within the IIS environment.
+  <img src="step8-register-php.png" width="80%" alt="Register PHP"/>
 </p>
-
-<br/>
+Use PHP Manager to register `php-cgi.exe` with IIS and restart IIS.
 
 ---
 
-### Step 9: From the “osTicket-Installation-Files” folder, install VC_redist.x86.exe.
-
-<p align="center">
-  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="osTicket Installation"/>
-</p>
-
+### **Step 9: Deploy osTicket Application Files**
 <p>
-Deploy the osTicket files, configure permissions, and complete the browser-based setup to finalize
-the installation.
+  <img src="step9-osticket-files.png" width="80%" alt="osTicket Files"/>
 </p>
+Copy osTicket files into `C:\inetpub\wwwroot\osTicket`.
 
 ---
 
-### Step 10: From the “osTicket-Installation-Files” folder, install MySQL 5.5.62 
-
-<p align="center">
-  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Environment Preparation"/>
-</p>
-
+### **Step 10: Launch osTicket Web Installer**
 <p>
-Confirm that the virtual machine is running, Remote Desktop access is functional, and IIS is installed.
-This establishes the foundation required for hosting the osTicket web application.
+  <img src="step10-installer.png" width="80%" alt="Installer"/>
 </p>
-
-<br/>
+Access the osTicket installer through the browser and verify system readiness.
 
 ---
 
-### Step 11: Open IIS as an Admin
-
-<p align="center">
-  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Installing Dependencies"/>
-</p>
-
+### **Step 11: Configure PHP Extensions**
 <p>
-Install and configure the necessary services and dependencies required for osTicket to function properly
-within the IIS environment.
+  <img src="step11-extensions.png" width="80%" alt="PHP Extensions"/>
 </p>
-
-<br/>
+Enable required PHP extensions and reload IIS as needed.
 
 ---
 
-### Step 12: Register PHP from within IIS (PHP Manager -> C:\PHP\php-cgi.exe)
-
-<p align="center">
-  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="osTicket Installation"/>
-</p>
-
+### **Step 12: Configure osTicket Settings**
 <p>
-Deploy the osTicket files, configure permissions, and complete the browser-based setup to finalize
-the installation.
+  <img src="step12-config.png" width="80%" alt="Config File"/>
 </p>
+Rename `ost-sampleconfig.php` to `ost-config.php` and assign temporary write permissions.
 
 ---
 
-### Step 13: Reload IIS (Open IIS, Stop and Start the server)
-
-<p align="center">
-  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Environment Preparation"/>
-</p>
-
+### **Step 13: Create Database with HeidiSQL**
 <p>
-Confirm that the virtual machine is running, Remote Desktop access is functional, and IIS is installed.
-This establishes the foundation required for hosting the osTicket web application.
+  <img src="step13-database.png" width="80%" alt="Database Setup"/>
 </p>
-
-<br/>
+Use HeidiSQL to create the osTicket database and database user.
 
 ---
 
-### Step 14: Install osTicket v1.15.8
-
-<p align="center">
-  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Installing Dependencies"/>
-</p>
-
+### **Step 14: Complete Browser-Based Installation**
 <p>
-Install and configure the necessary services and dependencies required for osTicket to function properly
-within the IIS environment.
+  <img src="step14-complete.png" width="80%" alt="Install Complete"/>
 </p>
-
-<br/>
+Finish the installer and confirm osTicket installs successfully without errors.
 
 ---
 
-### Step 15: Reload IIS (Open IIS, Stop and Start the server)
-
-<p align="center">
-  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="osTicket Installation"/>
-</p>
-
+### **Step 15: Verify End-User Portal**
 <p>
-Deploy the osTicket files, configure permissions, and complete the browser-based setup to finalize
-the installation.
+  <img src="step15-end-user.png" width="80%" alt="End User Portal"/>
 </p>
-
----
-
-### Step 16: Go to sites -> Default -> osTicket
-
-<p align="center">
-  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Environment Preparation"/>
-</p>
-
-<p>
-Confirm that the virtual machine is running, Remote Desktop access is functional, and IIS is installed.
-This establishes the foundation required for hosting the osTicket web application.
-</p>
-
-<br/>
-
----
-
-### Step 17: Note that some extensions are not enabled
-
-<p align="center">
-  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Installing Dependencies"/>
-</p>
-
-<p>
-Install and configure the necessary services and dependencies required for osTicket to function properly
-within the IIS environment.
-</p>
-
-<br/>
-
----
-
-### Step 18: Rename: ost-config.php
-
-<p align="center">
-  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="osTicket Installation"/>
-</p>
-
-<p>
-Deploy the osTicket files, configure permissions, and complete the browser-based setup to finalize
-the installation.
-</p>
-
----
-
-### Step 19: Assign Permissions: ost-config.php
-
-<p align="center">
-  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Environment Preparation"/>
-</p>
-
-<p>
-Confirm that the virtual machine is running, Remote Desktop access is functional, and IIS is installed.
-This establishes the foundation required for hosting the osTicket web application.
-</p>
-
-<br/>
-
----
-
-### Step 20: Continue Setting up osTicket in the browser (click Continue)
-
-<p align="center">
-  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Installing Dependencies"/>
-</p>
-
-<p>
-Install and configure the necessary services and dependencies required for osTicket to function properly
-within the IIS environment.
-</p>
-
-<br/>
-
----
-
-### Step 21: From the “osTicket-Installation-Files” folder, install HeidiSQL.
-
-<p align="center">
-  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="osTicket Installation"/>
-</p>
-
-<p>
-Deploy the osTicket files, configure permissions, and complete the browser-based setup to finalize
-the installation.
-</p>
-
----
-
-### Step 22: Continue Setting up osTicket in the browser
-
-<p align="center">
-  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Environment Preparation"/>
-</p>
-
-<p>
-Confirm that the virtual machine is running, Remote Desktop access is functional, and IIS is installed.
-This establishes the foundation required for hosting the osTicket web application.
-</p>
-
-<br/>
-
----
-
-### Step 23: Congratulations, hopefully it is installed with no errors!
-
-<p align="center">
-  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Installing Dependencies"/>
-</p>
-
-<p>
-Install and configure the necessary services and dependencies required for osTicket to function properly
-within the IIS environment.
-</p>
-
-<br/>
-
----
-
-### Step 24: End Users osTicket URL:
-
-<p align="center">
-  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="osTicket Installation"/>
-</p>
-
-<p>
-Deploy the osTicket files, configure permissions, and complete the browser-based setup to finalize
-the installation.
-</p>
-
----
-
-### Step 25: Prepare the Environment
-
-<p align="center">
-  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Environment Preparation"/>
-</p>
-
-<p>
-Confirm that the virtual machine is running, Remote Desktop access is functional, and IIS is installed.
-This establishes the foundation required for hosting the osTicket web application.
-</p>
-
-<br/>
-
----
-
-### Step 26: Install Required Components
-
-<p align="center">
-  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Installing Dependencies"/>
-</p>
-
-<p>
-Install and configure the necessary services and dependencies required for osTicket to function properly
-within the IIS environment.
-</p>
-
-<br/>
-
----
-
-### Step 27: Deploy osTicket
-
-<p align="center">
-  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="osTicket Installation"/>
-</p>
-
-<p>
-Deploy the osTicket files, configure permissions, and complete the browser-based setup to finalize
-the installation.
-</p>
-
----
-
-### Step 28: Prepare the Environment
-
-<p align="center">
-  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Environment Preparation"/>
-</p>
-
-<p>
-Confirm that the virtual machine is running, Remote Desktop access is functional, and IIS is installed.
-This establishes the foundation required for hosting the osTicket web application.
-</p>
-
-<br/>
-
----
-
-### Step 29: Install Required Components
-
-<p align="center">
-  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Installing Dependencies"/>
-</p>
-
-<p>
-Install and configure the necessary services and dependencies required for osTicket to function properly
-within the IIS environment.
-</p>
-
-<br/>
-
----
-
-### Step 30: Deploy osTicket
-
-<p align="center">
-  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="osTicket Installation"/>
-</p>
-
-<p>
-Deploy the osTicket files, configure permissions, and complete the browser-based setup to finalize
-the installation.
-</p>
+Confirm the osTicket end-user portal loads and is ready to accept support tickets.
 
 ---
 
@@ -490,15 +169,4 @@ the installation.
 
 ## ✅ Outcome
 
-By the end of this project, you will have:
-
-- A fully functional **osTicket help desk**
-- Hands-on experience with **Azure VMs**
-- Practical exposure to **IIS configuration**
-- A strong **Help Desk / IT Support portfolio project**
-
----
-
-<p align="center">
-  <i>Project created for hands-on learning and professional portfolio development</i>
-</p>
+This project resulted in a fully operational osTicket help desk deployed on Azure, demonstrating hands-on experience with virtual machines, IIS, PHP, MySQL, and real-world help desk system installation.
