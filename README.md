@@ -70,18 +70,26 @@ Download and extract the osTicket installation package within the Azure VM.
 ---
 
 ### **Step 4: Install IIS with CGI Enabled**
+<div style="display: flex; justify-content: space-around; align-items: center;">
+  <img src="step4-iis1.png" width="45%" alt="IIS Windows Features"/>
+  <img src="step4-iis2.png" width="45%" alt="CGI Enabled"/>
+</div>
+
 <p>
-  <img src="step4-iis.png" width="80%" alt="IIS CGI"/>
-</p>
 Enable IIS through Windows Features and ensure CGI support is selected.
+</p>
 
 ---
 
 ### **Step 5: Install IIS Dependencies**
+<div style="display: flex; justify-content: space-around; align-items: center;">
+  <img src="step5-dependencies1.png" width="45%" alt="PHP Manager"/>
+  <img src="step5-dependencies2.png" width="45%" alt="IIS URL Rewrite Module"/>
+</div>
+
 <p>
-  <img src="step5-dependencies.png" width="80%" alt="PHP Manager and Rewrite"/>
-</p>
 Install PHP Manager for IIS and the IIS URL Rewrite Module.
+</p>
 
 ---
 
@@ -93,7 +101,15 @@ Create `C:\PHP`, extract PHP 7.3.8, and install the Visual C++ Redistributable.
 
 ---
 
-### **Step 7: Install MySQL Server**
+### **Step 7: Install Microsoft Visual C++ Redistributable**
+<p>
+  <img src="step6-php.png" width="80%" alt="PHP Install"/>
+</p>
+Install the **Microsoft Visual C++ Redistributable** to satisfy runtime dependencies required by PHP and MySQL. This ensures that the osTicket application and its supporting services function correctly on Windows.
+
+---
+
+### **Step 8: Install MySQL Server**
 <p>
   <img src="step7-mysql.png" width="80%" alt="MySQL Install"/>
 </p>
@@ -101,65 +117,106 @@ Install MySQL Server to support osTicket’s backend database.
 
 ---
 
-### **Step 8: Register PHP in IIS**
-<p>
-  <img src="step8-register-php.png" width="80%" alt="Register PHP"/>
+### **Step 9: Register PHP in IIS**
+
+<p align="center">
+  <img src="step8-iis-manager.png" width="80%" alt="IIS Manager with PHP Manager Highlighted"/>
 </p>
-Use PHP Manager to register `php-cgi.exe` with IIS and restart IIS.
+<p align="center">
+  <img src="step8-register-php.png" width="80%" alt="Register PHP Version in PHP Manager"/>
+</p>
+
+Use PHP Manager to register <code>php-cgi.exe</code> with IIS and restart the web server. The first screenshot shows PHP Manager inside IIS, and the second shows the registration of the PHP executable.
 
 ---
 
-### **Step 9: Deploy osTicket Application Files**
-<p>
-  <img src="step9-osticket-files.png" width="80%" alt="osTicket Files"/>
+### **Step 10: Deploy osTicket Application Files**
+
+This step demonstrates moving the osTicket installation files into IIS’s web root and preparing the application for the browser-based installer.
+
+<p align="center">
+  <img src="52. Taking (upload) folder and adding it to the wwwroot folder.png" width="80%" alt="Initial Folder Setup"/>
 </p>
-Copy osTicket files into `C:\inetpub\wwwroot\osTicket`.
+
+**Step 10a – Initial Folder Structure:**  
+Shows the extracted `osTicket-v1.15.8` folder containing `upload` and `scripts`, and the `wwwroot` folder with only the default `iisstart` file.
+
+<p align="center">
+  <img src="53. upload in wwwroot.png" width="80%" alt="Moving Upload Folder"/>
+</p>
+
+**Step 10b – Moving Upload Folder:**  
+Copy or move the `upload` folder from `osTicket-v1.15.8` into the `C:\inetpub\wwwroot` directory.
+
+<p align="center">
+  <img src="54. Change upload name to osTicket.png" width="80%" alt="Renamed Upload Folder"/>
+</p>
+
+**Step 10c – Final Deployment:**  
+Rename the `upload` folder to `osTicket` inside `wwwroot`. This completes the deployment of the application files, making it ready to access via the web installer.
 
 ---
 
-### **Step 10: Launch osTicket Web Installer**
+### **Step 11: Launch osTicket Web Installer**
 <p>
-  <img src="step10-installer.png" width="80%" alt="Installer"/>
+  <img src="58. osTicket installer Prerequisites with missing some extensions.png" width="80%" alt="Installer"/>
 </p>
 Access the osTicket installer through the browser and verify system readiness.
 
 ---
 
-### **Step 11: Configure PHP Extensions**
+### **Step 12: Configure PHP Extensions**
 <p>
-  <img src="step11-extensions.png" width="80%" alt="PHP Extensions"/>
+  <img src="63. Refresh osTicket installer page and extensions are added. .png" width="80%" alt="PHP Extensions"/>
 </p>
 Enable required PHP extensions and reload IIS as needed.
 
 ---
 
-### **Step 12: Configure osTicket Settings**
+### **Step 13: Configure osTicket Settings**
 <p>
-  <img src="step12-config.png" width="80%" alt="Config File"/>
+  <img src="69. Advanced Security settings for ost-config.php.png" width="80%" alt="Config File"/>
 </p>
 Rename `ost-sampleconfig.php` to `ost-config.php` and assign temporary write permissions.
 
 ---
 
-### **Step 13: Create Database with HeidiSQL**
+### **Step 13a: osTicket Installer Database Requirement**
 <p>
-  <img src="step13-database.png" width="80%" alt="Database Setup"/>
+  <img src="76. osTicket system_admin user_database settings basic installation setup.png" width="80%" alt="Installer Missing Database Info"/>
+</p>
+Before you can proceed with osTicket installation, the web installer requires database details.  
+This includes:
+
+- MySQL Hostname  
+- MySQL Database  
+- MySQL Username  
+- MySQL Password  
+- Table Prefix (optional)  
+
+This screenshot highlights that the installer cannot continue until a database and user are created.
+
+---
+
+### **Step 14: Create Database with HeidiSQL**
+<p>
+  <img src="87. Refresh osTicket in HeidiSQL and see that it's not emoty anymore.png" width="80%" alt="Database Setup"/>
 </p>
 Use HeidiSQL to create the osTicket database and database user.
 
 ---
 
-### **Step 14: Complete Browser-Based Installation**
+### **Step 15: Complete Browser-Based Installation**
 <p>
-  <img src="step14-complete.png" width="80%" alt="Install Complete"/>
+  <img src="90. osTicket installed.png" width="80%" alt="Install Complete"/>
 </p>
 Finish the installer and confirm osTicket installs successfully without errors.
 
 ---
 
-### **Step 15: Verify End-User Portal**
+### **Step 16: Verify End-User Portal**
 <p>
-  <img src="step15-end-user.png" width="80%" alt="End User Portal"/>
+  <img src="91. Support center_Support ticket system .png" width="80%" alt="End User Portal"/>
 </p>
 Confirm the osTicket end-user portal loads and is ready to accept support tickets.
 
