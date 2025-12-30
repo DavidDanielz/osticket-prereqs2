@@ -103,7 +103,7 @@ Create `C:\PHP`, extract PHP 7.3.8, and install the Visual C++ Redistributable.
 
 ### **Step 7: Install Microsoft Visual C++ Redistributable**
 <p>
-  <img src="step6-php.png" width="80%" alt="PHP Install"/>
+  <img src="40. Microsoft Visual C++ Install.png" width="80%" alt="PHP Install"/>
 </p>
 Install the **Microsoft Visual C++ Redistributable** to satisfy runtime dependencies required by PHP and MySQL. This ensures that the osTicket application and its supporting services function correctly on Windows.
 
@@ -111,7 +111,7 @@ Install the **Microsoft Visual C++ Redistributable** to satisfy runtime dependen
 
 ### **Step 8: Install MySQL Server**
 <p>
-  <img src="step7-mysql.png" width="80%" alt="MySQL Install"/>
+  <img src="41. Install MySQL Server 5.5.png" width="80%" alt="MySQL Install"/>
 </p>
 Install MySQL Server to support osTicket’s backend database.
 
@@ -120,10 +120,10 @@ Install MySQL Server to support osTicket’s backend database.
 ### **Step 9: Register PHP in IIS**
 
 <p align="center">
-  <img src="step8-iis-manager.png" width="80%" alt="IIS Manager with PHP Manager Highlighted"/>
+  <img src="44. Click PHP Manager in IIS.png" width="80%" alt="IIS Manager with PHP Manager Highlighted"/>
 </p>
 <p align="center">
-  <img src="step8-register-php.png" width="80%" alt="Register PHP Version in PHP Manager"/>
+  <img src="47. Register new PHP version.png" width="80%" alt="Register PHP Version in PHP Manager"/>
 </p>
 
 Use PHP Manager to register <code>php-cgi.exe</code> with IIS and restart the web server. The first screenshot shows PHP Manager inside IIS, and the second shows the registration of the PHP executable.
